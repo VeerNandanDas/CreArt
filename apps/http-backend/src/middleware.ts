@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
-import { JWT_SECRET } from "./config";
+import { JWT_SECRET } from "@repo/be-common";
 
 export const middleware = (req : Request , res : Response , next : NextFunction)=>{
     const token = req.headers.authorization;
